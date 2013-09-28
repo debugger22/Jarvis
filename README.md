@@ -16,6 +16,7 @@ How does it work
   and see the magic
 * It can do basic mathematics
 * It can search for information on Wikipedia. "Search Tony Stark"
+* It can tell about your current location. Say "Where am I" or "Where are we"
 * It can play music(Not developed completely)
  
 
