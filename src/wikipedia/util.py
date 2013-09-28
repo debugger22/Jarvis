@@ -1,0 +1,35 @@
+import sys
+import functools
+
+def debug(fn):
+    def wrapper(*args, **kwargs):
+        res = fn(*args, **kwargs)
+        return res
+    return wrapper
+
+
+class cache(object):
+
+    def __init__(self, fn):
+        self.fn = fn
+        self._cache = {}
+        functools.update_wrapper(self, fn)
+
+    def __call__(self, *args, **kwargs):
+        key = str(args) + str(kwargs)
+        if key in self._cache:
+            ret = self._cache[key]
+        else:
+            ret = self._cache[key] = self.fn(*args, **kwargs)
+
+        return ret
+    
+    def clear_cache(self):
+        self._cache = {}       
+
+
+# from http://stackoverflow.com/questions/3627793/best-output-type-and-encoding-practices-for-repr-functions
+def stdout_encode(u, default='UTF8'):
+    if sys.stdout.encoding:
+        return u.encode(sys.stdout.encoding)
+    return u.encode(default)
