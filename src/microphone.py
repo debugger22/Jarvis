@@ -63,7 +63,7 @@ class Microphone:
 						rate = RATE, 
 						input = True, 
 						frames_per_buffer = CHUNK)
-		sys.stdout.write("Jarvis is listening...")
+		print("Jarvis is listening...")
 
 		speech_started = False
 		speech = 0
@@ -97,7 +97,7 @@ class Microphone:
 					speech_started = True
 				if silence_before_speech > WAIT_DURATION:
 					break
-		sys.stdout.write("Processing...")
+		print("Processing...")
 		sample_width = p.get_sample_size(FORMAT)
 		stream.stop_stream() 
 		stream.close()
