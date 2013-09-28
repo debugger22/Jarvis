@@ -52,7 +52,7 @@ def wakeup():
 				if check_sleep(stt_response.split(' ')):
 					break
 				response = k.respond(stt_response)
-				sys.stdout.write(response)
+				print(response)
 				tts_engine.say(response)
 		except:
 			commonsense.sorry()
