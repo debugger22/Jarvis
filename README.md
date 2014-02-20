@@ -15,7 +15,7 @@ How does it work
 * It can open some website for you such as Google, Facebook, etc. Just say "Can you open twitter for me"
   and see the magic
 * It can do basic mathematics
-* It can search for information on Wikipedia. "Search Tony Stark"
+* It can search for information on Wikipedia. "Search Microsoft"
 * It can tell about your current location. Say "Where am I" or "Where are we"
 * It can play music(Not developed completely)
  
