@@ -26,11 +26,8 @@ def sorry():
     '''
     speak_engine.play_wav(
         SORRY_PATH +
-        sorry_files[
-            random.randint(
-                0,
-                len(sorry_files) -
-                1)])
+        random.choice(sorry_files)
+    )
 
 SLEEPY_PATH = "wav/sleepy/"
 sleepy_files = os.listdir(SLEEPY_PATH)
@@ -42,8 +39,5 @@ def sleepy():
     '''
     speak_engine.play_wav(
         SLEEPY_PATH +
-        sleepy_files[
-            random.randint(
-                0,
-                len(sleepy_files) -
-                1)])
+        random.choice(sleepy_files)
+    )
