@@ -18,7 +18,7 @@ How does it work
 * It can search for information on Wikipedia. "Search Microsoft"
 * It can tell about your current location. Say "Where am I" or "Where are we"
 * It can play music(Not developed completely)
- 
+
 
 Dependencies
 -----------
@@ -33,5 +33,6 @@ Operating Systems
 ----------------
 * Linux
 * Mac
+    - `brew install portaudio` for PyAudio to install
 * Don't try on Windows, it won't work
 
