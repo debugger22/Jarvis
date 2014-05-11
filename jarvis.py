@@ -24,7 +24,7 @@ def check_sleep(words):
 
 
 def sleep():
-    while True:
+    while not exit_flag:
         try:
             mic = microphone.Microphone()
             a, s_data = mic.listen()
@@ -39,7 +39,7 @@ def sleep():
 
 
 def wakeup():
-    while True:
+    while not exit_flag:
         mic = microphone.Microphone()
         a, s_data = mic.listen()
         a = 0
