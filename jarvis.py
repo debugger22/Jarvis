@@ -50,6 +50,7 @@ def wakeup():
         try:
             stt_engine = google_stt.Google_STT(mic)
             stt_response = stt_engine.get_text()
+            print("Heard: %r" % stt_response)
             if(jarvis_brain.process(stt_response)):
                 pass
             else:
