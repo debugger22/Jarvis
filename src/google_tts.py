@@ -3,6 +3,12 @@ import wave
 import tempfile
 import requests
 from pydub import AudioSegment
+import sys
+
+if sys.platform == 'darwin':
+    PLAYER = 'afplay %s'
+else:
+    PLAYER = 'aplay -q %s'
 
 
 class Google_TTS:
@@ -46,4 +52,4 @@ class Google_TTS:
         """
         This method plays passed wav file using a terminal software called aplay
         """
-        os.system("aplay -q " + filename)
+        os.system(PLAYER % (filename,))

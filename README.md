@@ -23,8 +23,8 @@ How does it work
 Dependencies
 -----------
 
-1. BeautifulSoup
-2. PyAIML
+1. BeautifulSoup (version 4)
+2. [PyAIML](http://pyaiml.sourceforge.net/)
 3. PyAudio
 4. PyDub
 5. Requests
