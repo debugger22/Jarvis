@@ -38,7 +38,7 @@ sleepy_files = os.listdir(SLEEPY_PATH)
 
 def sleepy():
     '''
-    This method will play pre-recorded sorry wav files
+    This method will play pre-recorded sleepy wav files
     '''
     speak_engine.play_wav(
         SLEEPY_PATH +
