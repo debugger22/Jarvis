@@ -3,6 +3,19 @@ import os
 import random
 speak_engine = google_tts.Google_TTS()
 
+UHOH_PATH = "wav/uhoh/"
+uhoh_files = os.listdir(UHOH_PATH)
+
+
+def uhoh():
+    '''
+    This method will play pre-recorded uhoh wav files
+    '''
+    speak_engine.play_wav(
+        UHOH_PATH +
+        random.choice(uhoh_files)
+    )
+
 SORRY_PATH = "wav/sorry/"
 sorry_files = os.listdir(SORRY_PATH)
 

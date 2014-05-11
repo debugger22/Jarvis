@@ -5,6 +5,7 @@ from src import google_stt
 from src import microphone
 from src import commonsense
 from src import brain
+from excp.exception import NotUnderstoodException
 
 exit_flag = 0
 tts_engine = google_tts.Google_TTS()
@@ -34,7 +35,7 @@ def sleep():
             if 'wake' in words_stt_response or 'jarvis' in words_stt_response or 'wakeup' in words_stt_response:
                 tts_engine.say("Hello Sir, I am back once again.")
                 wakeup()
-        except:
+        except Exception:
             pass
 
 
@@ -57,8 +58,12 @@ def wakeup():
                 response = k.respond(stt_response)
                 print(response)
                 tts_engine.say(response)
-        except:
+        except NotUnderstoodException:
             commonsense.sorry()
+        except Exception:
+            print("Error in processing loop:")
+            traceback.print_exc()
+            commonsense.uhoh()
 
 k.loadBrain('data/jarvis.brn')
 try:
