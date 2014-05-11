@@ -27,7 +27,7 @@ def check_sleep(words):
 def sleep():
     while not exit_flag:
         try:
-            mic = microphone.Microphone()
+            #mic = microphone.Microphone()
             a, s_data = mic.listen()
             stt_engine = google_stt.Google_STT(mic)
             stt_response = stt_engine.get_text()
@@ -41,7 +41,7 @@ def sleep():
 
 def wakeup():
     while not exit_flag:
-        mic = microphone.Microphone()
+        #mic = microphone.Microphone()
         a, s_data = mic.listen()
         a = 0
         if mic.is_silent(s_data):
