@@ -3,3 +3,4 @@ PyAudio==0.2.8
 pydub==0.9.1
 requests==2.2.1
 http://downloads.sourceforge.net/project/pyaiml/PyAIML%20%28unstable%29/0.8.6/PyAIML-0.8.6.zip
+http://pyyaml.org/download/pyyaml/PyYAML-3.11.zip
