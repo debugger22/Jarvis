@@ -23,6 +23,8 @@ How does it work
 Dependencies
 -----------
 
+Dependencies can be installed by running this [pip](https://pypi.python.org/pypi/pip) command `sudo pip install -r requirements.txt`
+
 1. BeautifulSoup (version 4)
 2. [PyAIML](http://pyaiml.sourceforge.net/)
 3. PyAudio
@@ -32,6 +34,7 @@ Dependencies
 Operating Systems
 ----------------
 * Linux
+    - `sudo apt-get install libjack-jackd2-dev portaudio19-dev` for PyAudio to install
 * Mac
     - `brew install portaudio` for PyAudio to install
 * Don't try on Windows, it won't work
