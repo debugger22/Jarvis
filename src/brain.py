@@ -8,6 +8,7 @@ from src import google_tts
 from src.wikipedia import wikipedia
 from src import network
 from src.some_functions import *
+from src import common
 speak_engine = google_tts.Google_TTS()
 
 
@@ -56,7 +57,10 @@ class Brain():
             if 'a' in words and 'song' in words:
                 thread.start_new_thread(play_music, ())
             return True
-
+        if 'current' in words and 'time' in words:            
+            time = common.getCurrentTime()
+            speak_engine.say(time)
+            return True
         '''Handling Mathematical/Computational queries'''
         if 'add' in words or 'subtract' in words or 'multiply' in words or 'divide' in words:
             try:
