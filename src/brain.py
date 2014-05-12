@@ -4,6 +4,7 @@ import os
 import random
 import urllib
 import thread
+import yaml
 
 from src import google_tts
 from src.wikipedia import wikipedia
