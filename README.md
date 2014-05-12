@@ -34,7 +34,7 @@ Dependencies can be installed by running this [pip](https://pypi.python.org/pypi
 Operating Systems
 ----------------
 * Linux
-    - `sudo apt-get install python-pyaudio` for PyAudio to install
+    - `sudo apt-get install libjack-jackd2-dev portaudio19-dev` for PyAudio to install
 * Mac
     - `brew install portaudio` for PyAudio to install
 * Don't try on Windows, it won't work
