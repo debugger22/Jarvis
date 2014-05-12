@@ -1,5 +1,7 @@
 import aiml
 import sys
+import traceback
+
 from src import google_tts
 from src import google_stt
 from src import microphone
