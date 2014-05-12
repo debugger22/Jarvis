@@ -1,0 +1,7 @@
+config:
+ websites:
+  facebook: 'http://www.facebook.com'
+  twitter: 'http://www.twitter.com'
+  gmail: 'http://www.gmail.com'
+  youtube: 'http://www.youtube.com'
+  github: 'http://www.github.com'
