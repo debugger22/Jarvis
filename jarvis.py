@@ -1,5 +1,7 @@
 import aiml
 import sys
+import traceback
+
 from src import google_tts
 from src import google_stt
 from src import microphone
@@ -62,8 +64,8 @@ def wakeup():
         except NotUnderstoodException:
             commonsense.sorry()
         except Exception:
-            print("Error in processing loop:")
-            traceback.print_exc()
+            print("\nError in processing loop\n")
+            # traceback.print_exc()
             commonsense.uhoh()
 
 k.loadBrain('data/jarvis.brn')
@@ -78,4 +80,8 @@ for bot_predicate in bot_predicates:
     key_value = bot_predicate.split('::')
     if len(key_value) == 2:
         k.setBotPredicate(key_value[0], key_value[1].rstrip('\n'))
-wakeup()
+
+try:
+    wakeup()
+except KeyboardInterrupt:
+    print "\nShutting down Jarvis...\n"
