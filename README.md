@@ -31,6 +31,7 @@ Dependencies can be installed by running this [pip](https://pypi.python.org/pypi
 4. PyDub
 5. Requests
 6. PyYAML
+7. Google Speech API Key
 
 Operating Systems
 ----------------
