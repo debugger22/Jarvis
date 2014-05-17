@@ -26,7 +26,7 @@ class Google_STT:
         (_, stt_flac_filename) = tempfile.mkstemp('.flac')
         sound = AudioSegment.from_wav(self.audio.filename())
         sound.export(stt_flac_filename, format="flac")
-        api_key = "AIzaSyCnl6MRydhw_5fLXIdASxkLJzcJh5iX0M4"
+        api_key = ""
         g_url = "http://www.google.com/speech-api/v2/recognize?output=json&lang=en_US&key=%s" % api_key
         headers = {'Content-Type': 'audio/x-flac; rate=%d;' % self.rec_rate}
         recording_flac_data = open(stt_flac_filename, 'rb').read()
