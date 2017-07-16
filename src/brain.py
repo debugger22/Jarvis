@@ -61,7 +61,7 @@ class Brain():
                 if len(nums) < 2:
                     mod_text = words_to_nums(text)
                     nums += re.findall('\d+', mod_text)
-                    print nums
+                    print (nums)
                 nums = map(int, nums)
                 if 'add' in words:
                     speak_engine.say("It is " + str(sum(nums)))
