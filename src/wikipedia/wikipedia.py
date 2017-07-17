@@ -1,5 +1,5 @@
 import requests
-from bs4 import BeautifulSoup
+import BeautifulSoup
 
 from .exceptions import *
 from .util import cache, stdout_encode
