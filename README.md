@@ -59,9 +59,9 @@ Operating Systems
 pip install pyttsx3
 ```
 In case you receive such errors: 
-No module named win32com.client
-No module named win32
-No module named win32api
+* No module named win32com.client
+* No module named win32
+* No module named win32api
 run the following command and repeat the previous step:
 ```
 pip install pypiwin32
