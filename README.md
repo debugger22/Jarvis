@@ -24,7 +24,7 @@ How does it work
 * It can tell about your current location. Say "Where am I" or "Where are we"
 * It can play music(Not developed completely)
 
-Features for Windows 
+Features For Windows 
 -------------------------
 
 * It can send emails for you.
