@@ -15,6 +15,49 @@ jarvis_brain = brain.Brain()
 mic = microphone.Microphone()
 k = aiml.Kernel()
 
+MASTER = "Sir"
+
+
+engine = pyttsx3.init()
+
+
+def speak(audio):
+    engine.say(audio)
+    engine.runAndWait()
+
+
+def time():
+    Time = datetime.datetime.now().strftime("%I:%M:%S" )
+    speak(Time)
+
+
+def date():
+    year = int(datetime.datetime.now().year )
+    month = int(datetime.datetime.now().month )
+    date = int(datetime.datetime.now().day )
+    speak(date)
+    speak(month)
+    speak(year)
+
+
+def wishMe():
+    speak("Welcome back sir")
+    # speak("The current time is")
+    # time()
+    # speak("The current date is")
+    # date()
+    hour = datetime.datetime.now().hour
+    if hour>=0 and hour<12:
+        speak("Good Morning " + MASTER)
+
+
+    elif hour>=12 and hour<18:
+        speak("Good Afternoon " + MASTER)
+
+
+    else:
+        speak("Good Evening " + MASTER)
+    speak("I am JARVIS. Please tell me sir how may I help you?")
 
 def check_sleep(words):
     if 'sleep' in words or 'hibernate' in words:
